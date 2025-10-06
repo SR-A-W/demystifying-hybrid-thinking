@@ -1,16 +1,16 @@
-## Training
-For model training, we use a fork from [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory).
+This repository is the official implementation for our paper Demystifying Hybrid Thinking: Cam LLMs Truly Switch Between Think And No-Think?.
 
-### Adding New Tasks
-To use/add new training tasks, please follow the steps below:
+## Repository Structure
 
-1. Please add the dataset file under [LLaMA-Factory/data](./LLaMA-Factory/data) directory, and update [LLaMA-Factory/data/dataset_info.json](./LLaMA-Factory/data/dataset_info.json) correspondingly.
+- **`train/`**: Training code using [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)
+- **`eval/`**: Evaluation code using [SkyThought](https://github.com/NovaSky-AI/SkyThought)
+- **`utils/`**: Dataset construction, processing, and utility scripts
+- **`scripts/`**: Training and evaluation task scripts (`.sh` for shell scripts, `.slurm` for HPC clusters)
 
-2. Please use the sft settings under [LLaMA-Factory/examples/train_full](./LLaMA-Factory/examples/train_full) directory. If you need to customize your task, you can construct your own `.yaml` file.
+## Quick Start
 
-### Running SFT 
-To run training tasks, please follow the steps below:
-1. If you haven't yet, install LLaMA-Factory following the instruction in LLaMA-Factory's [README.md](./LLaMA-Factory/README.md) (by using `pip install -e ".[torch,metrics]" --no-build-isolation`). 
-2. To run a training task, use LLaMA-Factory's command lines, for example, `llamafactory-cli train examples/train_full/qwen2_full_sft.yaml`
+1. **Training**: See [train/README.md](train/README.md) for training instructions
+2. **Evaluation**: See [eval/README.md](eval/README.md) for evaluation instructions
+3. **Utilities**: See [utils/README.md](utils/README.md) for dataset processing utilities
+4. **Scripts**: See [scripts/README.md](scripts/README.md) for example execution scripts
 
-To train 7/8B models, we recommend using 2 H200 GPUs, 24 CPUs, or equivalent.
