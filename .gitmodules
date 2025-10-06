@@ -1,0 +1,6 @@
+[submodule "eval/SkyThought"]
+	path = eval/SkyThought
+	url = https://github.com/SR-A-W/SkyThought.git
+[submodule "train/LLaMA-Factory"]
+	path = train/LLaMA-Factory
+	url = https://github.com/SR-A-W/LLaMA-Factory.git

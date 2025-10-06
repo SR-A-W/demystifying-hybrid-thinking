@@ -1,0 +1,6 @@
+Here we provide scirpts for construct dataset, split dataset, and count reflective tokens (e.g. "Wait", "Hmm"):
+1. [construct_dataset.py](utils/construct_dataset.py): You can run this python script to construct datasets, but first, please download the default subset of [OpenR1-Math](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k). Then run the python file, for example `python construct_dataset_demo.py --total_size 40000 --think_max_tokens 15000 --output_path ./result.jsonl --allow_duplicates --think_ratio 0.56`.
+
+2. [split_dataset.py](utils/split_dataset.py): You can run this python script to split constructed datasets——this step is for spliting datesets for 2-phase training, e.g. `python split_dataset.py --input_path <your_dataset_path> --output_dir ./splited --split_size 4480`
+
+3. [reflective_token_stats.py](utils/reflective_token_stats.py): You can run this python file to count the number of reflective tokens for evaluation results from [SkyThought](eval/skythought). A summary JSON file will be generated for each evaluation result. An example to run this python file: `python reflective_token_stats.py --input_dir <your_result_dir>`
