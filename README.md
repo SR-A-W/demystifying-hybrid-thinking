@@ -1,4 +1,4 @@
-This repository is the official implementation for our paper Demystifying Hybrid Thinking: Cam LLMs Truly Switch Between Think And No-Think?.
+This repository is the official implementation for our paper, "Demystifying Hybrid Thinking: Cam LLMs Truly Switch Between Think And No-Think?"".
 
 ## Repository Structure
 
