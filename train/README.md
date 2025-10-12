@@ -28,7 +28,7 @@ The [tasks](./tasks) directory contains the following experiment categories:
 
 #### General Training Instructions
 To run training tasks, please follow the steps below:
-1. **Install LLaMA-Factory**: If you haven't yet, install LLaMA-Factory following the instruction in LLaMA-Factory's [README.md](./LLaMA-Factory/README.md) (by using `pip install -e ".[torch,metrics]" --no-build-isolation`). 
+1. **Install LLaMA-Factory**: If you haven't yet, install LLaMA-Factory following the instruction in LLaMA-Factory's [README.md](https://github.com/hiyouga/LLaMA-Factory/README.md) (by using `pip install -e ".[torch,metrics]" --no-build-isolation`). 
 2. To run a training task, use LLaMA-Factory's command lines, for example, `llamafactory-cli train train/tasks/local_demo/qwen0.5_phase1_20k.yaml`
 
 To train 7/8B models, we recommend using 2 H200 GPUs, 24 CPUs, or equivalent.
@@ -37,7 +37,7 @@ To train 7/8B models, we recommend using 2 H200 GPUs, 24 CPUs, or equivalent.
 For a quick smoke test that can run on consumer hardware (16GB GPU):
 
 1. Install LLaMA-Factory (if not already installed):
-   See [README.md](./LLaMA-Factory/README.md)
+   See [README.md](https://github.com/hiyouga/LLaMA-Factory/README.md)
 
 2. Navigate to the project root directory:
    ```bash
