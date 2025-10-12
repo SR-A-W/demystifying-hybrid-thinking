@@ -1,0 +1,71 @@
+# Experiment goal: Train a reasoning tuned Llama model as phase 2 model. Use 1.0 of /think samples + all /no-think samples from 2:1 ratio dataset
+# Design & Settings:
+# 1. Model: Llama-3.1-8B-Instruct
+# 2. Training Mode: phase2 of 2-phase training
+# 3. Dataset: A hybrid dataset, using 1.0 of /think samples + all /no-think samples from the original 2:1 ratio dataset.
+# 4. System prompt: empty string
+
+
+### model
+# NOTE:----------Double check this one!----------
+model_name_or_path: train/saves/factors/ratio/2-phase/Llama_phase1_2_1_80k
+# image_max_pixels: 262144
+# video_max_pixels: 16384
+# trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+freeze_vision_tower: true
+freeze_multi_modal_projector: true
+freeze_language_model: false
+deepspeed: train/LLaMA-Factory/examples/deepspeed/ds_z3_config.json
+
+### dataset
+# NOTE:----------Double check this one!----------
+dataset_dir: train/data
+dataset: ratio_phase2_2_1_80k
+# NOTE:----------Double check this one!----------
+template: llama3
+cutoff_len: 16384
+max_samples: 100000000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+# NOTE:----------Double check this one!----------
+default_system: ""
+
+
+### output
+# NOTE:----------Double check this one!----------
+output_dir: train/saves/factors/ratio/2-phase/Llama_phase2_2_1_80k
+save_only_model: true 
+logging_steps: 1
+# NOTE:----------Double check this one!----------
+save_steps: 5000
+plot_loss: true
+overwrite_output_dir: false
+# save_only_model: false
+report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+# NOTE:----------Double check this one!----------
+run_name: factors_ratio_2-phase_Llama_phase2_2_1_80k
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 12
+learning_rate: 1.0e-5
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+# flash_attn: fa2
+
+
+### eval
+# val_size: 0.1
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 500
