@@ -14,7 +14,7 @@ The [tasks](./tasks) directory contains the following experiment categories:
 
 - **`local_demo/`**: Local smoke tests that can be run on consumer hardware
   - Designed for quick testing and validation
-  - Requires only 16GB GPU memory (tested successfully on RTX 3080 Laptop 16GB)
+  - Requires only 16GB GPU memory
   - Perfect for local development and debugging
 
 - **`factors/`**: Experimental configurations for studying different factors
