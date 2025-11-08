@@ -24,7 +24,7 @@ deepspeed: train/LLaMA-Factory/examples/deepspeed/ds_z3_config.json
 ### dataset
 # NOTE:----------Double check this one!----------
 dataset_dir: train/data
-dataset: ratio_1_4_80k
+dataset: ratio_1_4_80k_mix
 # NOTE:----------Double check this one!----------
 template: llama3
 cutoff_len: 16384

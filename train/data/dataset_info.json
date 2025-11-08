@@ -279,8 +279,8 @@
       "assistant_tag": "assistant"
     }
   },
-  "ratio_1_8_80k": {
-    "file_name": "ratio_1_8_80k.jsonl",
+  "ratio_1_8_80k_mix": {
+    "file_name": "ratio_1_8_80k_mix.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
@@ -293,8 +293,8 @@
       "assistant_tag": "assistant"
     }
   },
-  "ratio_1_4_80k": {
-    "file_name": "ratio_1_4_80k.jsonl",
+  "ratio_1_4_80k_mix": {
+    "file_name": "ratio_1_4_80k_mix.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
@@ -307,8 +307,8 @@
       "assistant_tag": "assistant"
     }
   },
-  "ratio_1_2_80k": {
-    "file_name": "ratio_1_2_80k.jsonl",
+  "ratio_1_2_80k_mix": {
+    "file_name": "ratio_1_2_80k_mix.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
@@ -321,8 +321,8 @@
       "assistant_tag": "assistant"
     }
   },
-  "ratio_2_1_80k": {
-    "file_name": "ratio_2_1_80k.jsonl",
+  "ratio_2_1_80k_mix": {
+    "file_name": "ratio_2_1_80k_mix.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
@@ -335,8 +335,8 @@
       "assistant_tag": "assistant"
     }
   },
-  "ratio_4_1_80k": {
-    "file_name": "ratio_4_1_80k.jsonl",
+  "ratio_4_1_80k_mix": {
+    "file_name": "ratio_4_1_80k_mix.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
@@ -349,8 +349,8 @@
       "assistant_tag": "assistant"
     }
   },
-  "ratio_8_1_80k": {
-    "file_name": "ratio_8_1_80k.jsonl",
+  "ratio_8_1_80k_mix": {
+    "file_name": "ratio_8_1_80k_mix.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
